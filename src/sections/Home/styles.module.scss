@@ -1,0 +1,209 @@
+.home {
+  padding-top: 100px;
+  position: relative;
+  height: calc(100vh - 100px);
+  background-color: #fff;
+  transform: translateZ(0);
+  @media screen and (max-width: 992px) {
+    padding-top: 80px;
+  }
+  .content {
+    padding: 0 58px;
+    border-radius: 20px;
+    // background-color: #E8D5D0;
+    background-image: url("@/assets/svg/home.svg");
+    // max-width: 1400px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+
+    .bannerBox {
+      overflow: hidden;
+      padding-right: 28px;
+      padding-top: 12vh;
+      .banner {
+        background: url("@/assets/images/03e6d39b53555.webp") center no-repeat;
+        background-size: contain;
+        height: 100%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 2s;
+        left: 0;
+        bottom: 0;
+        width: 522px;
+        height: 518px;
+
+        &:hover{
+          left: -30px;
+          bottom: -20px;
+        }
+        .fire {
+          position: absolute;
+          height: auto;
+          width: 166px;
+          z-index: 1;
+          transform: rotate(80deg);
+          right: -20%;
+          top: 18%;
+        }
+
+        .fire2 {
+          width: 156px;
+          right: -16%;
+          top: 44%;
+        }
+      }
+    }
+
+    .intro {
+      padding-left: 28px;
+      padding-top: 12vh;
+      .react {
+        color: #61dafb;
+        font-family: Heavy, Helvetica, Arial, sans-serif;
+        transition: text-decoration .3s;
+
+        &:hover {
+          text-decoration: underline
+        }
+      }
+
+      .sometime {
+
+        // typed.js 的光标样式
+        &+span {
+          color: #bd0000 !important;
+        }
+
+        font-family: Heavy,
+        Helvetica,
+        Arial,
+        sans-serif;
+      }
+
+      p {
+        letter-spacing: 2px;
+        text-align: left;
+        font-size: 58px;
+        font-weight: 600;
+        color: #002245;
+        line-height: 1.5;
+        font-family: Heavy, Helvetica, Arial, sans-serif;
+
+      }
+    }
+
+    .next {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .handDown {
+        >div {
+          position: relative;
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          height: 100px;
+          width: 100px;
+          color: #ff771e;
+          cursor: pointer;
+
+          &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            border-radius: 50%;
+            transform: scale(0);
+            transition: all 0.3s;
+          }
+
+          &:hover {
+            &::after {
+              background-color: rgb(255 0 198 / 11%);
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 992px) {
+    & {
+      padding-top: 80px;
+      height: calc(100vh - 80px);
+    }
+
+    .content {
+      padding: 0 20px;
+      .bannerBox{
+        padding-top: 4vh;
+        .banner {
+          width: 422px;
+          height: 418px;
+          .fire {
+            width: 126px;
+            right: -22%;
+            top: 18%;
+          }
+  
+          .fire2 {
+            width: 116px;
+            right: -18%;
+            top: 44%;
+          }
+        }
+      }
+      .intro {
+        padding-top: 4vh;
+
+        p {
+          font-size: 2em;
+        }
+      }
+
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .content {
+      padding: 0 20px;
+      .bannerBox{
+        padding-right: 20px;
+        .banner {
+          width: 362px;
+          height: 358px;
+          .fire {
+            width: 106px;
+            right: -22%;
+            top: 18%;
+          }
+  
+          .fire2 {
+            width: 96px;
+            right: -18%;
+            top: 44%;
+          }
+        }
+      }
+      .intro {
+        padding-left: 20px;
+
+        p {
+          line-height: 1.4em;
+          font-size: 1.7em;
+        }
+      }
+    }
+  }
+
+
+}
