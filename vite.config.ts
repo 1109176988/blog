@@ -17,6 +17,7 @@ export default defineConfig({
       }
     }
   },
+  root:'/',
   build:{
     assetsDir: 'static',
   }
