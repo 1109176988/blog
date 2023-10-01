@@ -4,7 +4,7 @@ import path from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/fury_123.githubs.io',
+  base: '/fury_123.github.io/',
   plugins: [react()],
   resolve: {
     alias: {
